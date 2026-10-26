@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Две стороны Врат</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/scene.css">
+  <link rel="stylesheet" href="css/ui.css">
+  <link rel="stylesheet" href="css/radio.css">
+</head>
+<body class="on-front">
+
+  <div class="world">
+    <div class="backdrop">
+      <img class="for-front" src="img/backgrounds/gate-front.jpg" alt="">
+      <img class="for-back" src="img/backgrounds/gate-back.jpg" alt="">
+    </div>
+
+    <div class="stage">
+      <section class="side side-front">
+        <img class="bg" src="img/backgrounds/gate-front.jpg" alt="Врата снаружи">
+        <div class="stone" style="--x:680px"><span class="word">Ты</span><img class="glyph" alt=""><span class="sparks"></span></div>
+        <div class="stone" style="--x:836px"><span class="word">всё</span><img class="glyph" alt=""><span class="sparks"></span></div>
+        <div class="stone" style="--x:993px"><span class="word">сможешь</span><img class="glyph" alt=""><span class="sparks"></span></div>
+      </section>
+
+      <section class="side side-back">
+        <img class="bg" src="img/backgrounds/gate-back.jpg" alt="Врата изнутри">
+
+        <button class="tablet" id="tablet">
+          <span class="tablet-lines">
+            <span class="row"><img src="img/mechanism/rune-1.svg" alt="I">Дуга над кристаллом, ореол и опора из двух ступеней</span>
+            <span class="row"><img src="img/mechanism/rune-2.svg" alt="II">Четыре сферы вокруг ромба в замкнутом контуре</span>
+            <span class="row"><img src="img/mechanism/rune-3.svg" alt="III">Крылья раскрыты вверх от кристалла</span>
+            <span class="note">Метка на диске укажет место знака.</span>
+            <span class="note extra" id="noteMirror">Ты видишь врата с изнанки.</span>
+            <span class="note extra" id="noteLever">Рычаг ждёт столько делений, сколько искр у его камня.</span>
+          </span>
+        </button>
+
+        <div class="disc" style="--x:672px"><img src="img/mechanism/rune-3.svg" alt="III"></div>
+        <div class="disc" style="--x:836px"><img src="img/mechanism/rune-1.svg" alt="I"></div>
+        <div class="disc" style="--x:997px"><img src="img/mechanism/rune-2.svg" alt="II"></div>
+
+        <button class="lever" style="--x:672px"><img src="img/mechanism/lever-plate.svg" alt=""><img class="handle" src="img/mechanism/lever-handle.svg" alt=""></button>
+        <button class="lever" style="--x:836px"><img src="img/mechanism/lever-plate.svg" alt=""><img class="handle" src="img/mechanism/lever-handle.svg" alt=""></button>
+        <button class="lever" style="--x:997px"><img src="img/mechanism/lever-plate.svg" alt=""><img class="handle" src="img/mechanism/lever-handle.svg" alt=""></button>
+      </section>
+    </div>
+  </div>
+
+  <div class="static"></div>
+  <div class="vignette"></div>
+
+  <div class="edge" id="edge">
+    <span class="edge-label" id="edgeLabel">Изнутри</span>
+  </div>
+
+  <div class="who"><span id="whoPlace">Снаружи</span> — <b id="whoName">Багги</b></div>
+
+  <div class="tray" id="tray">
+    <div class="palette" id="palette"></div>
+    <button class="scan-btn" id="scanBtn" disabled>Сканировать символы</button>
+  </div>
+
+  <div class="radio" id="radio">
+    <div class="subs" id="subs">
+      <b class="subs-name" id="subsName"></b>
+      <span class="subs-text" id="subsText"></span>
+    </div>
+    <div class="walkie" id="walkie">
+      <img src="img/mechanism/walkie.svg" alt="Рация">
+      <span class="walkie-led"></span>
+    </div>
+  </div>
+
+  <div class="final" id="final">
+    <p>Ты всё сможешь!</p>
+    <button id="again">Пройти ещё раз</button>
+  </div>
+
+  <div class="zoom" id="zoom" hidden><div class="zoom-card" id="zoomCard"></div></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/radio.js"></script>
+  <script src="js/front.js"></script>
+  <script src="js/back.js"></script>
+  <script src="js/switch.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

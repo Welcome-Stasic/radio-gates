@@ -1,0 +1,26 @@
+:root {
+  --paper: #e9dcc0;
+  --ink: #241709;
+  --warm: rgba(255, 222, 160, .55);
+  --panel: rgba(20, 15, 10, .62);
+  --line: rgba(233, 220, 192, .18);
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --type: "Special Elite", "Courier New", monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #0d0a07;
+  color: var(--paper);
+  font-family: var(--serif);
+}
+
+button { font: inherit; color: inherit; cursor: pointer; }
+img { user-select: none; -webkit-user-drag: none; }
+
+@keyframes breathe { 50% { opacity: .75; } }
+@keyframes carve { from { opacity: 0; filter: blur(2px); } }
